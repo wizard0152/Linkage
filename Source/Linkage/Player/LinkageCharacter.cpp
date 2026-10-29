@@ -76,5 +76,5 @@ void ALinkageCharacter::Pitch(const FInputActionValue& Value) { AddControllerPit
 
 void ALinkageCharacter::ResetRoom()
 {
-    UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()));
+    UGameplayStatics::OpenLevel(this, FName(*UGameplayStatics::GetCurrentLevelName(this, true)));
 }
